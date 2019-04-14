@@ -3,6 +3,8 @@ const Cart = require('./Cart');
 function ShopCart() {
     this.items = [];
 }
- // ...your code there...
+ShopCart.prototype = new Cart;
+
+// ...your code there
 
 module.exports = ShopCart;
