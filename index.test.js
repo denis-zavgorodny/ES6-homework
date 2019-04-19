@@ -20,7 +20,7 @@ describe('ES6 Recap Home Work', () => {
         cart.add(Foo, 3);
         cart.add(Bar, 2);
         cart.remove(Foo);
-        expect(cart.items.length).toBe(2);
+        expect(cart.items.length).toBe(1);
     });
     test('We can change quantity items in cart', () => {
         const cart = new ShopCart();
