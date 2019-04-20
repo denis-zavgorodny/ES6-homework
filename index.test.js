@@ -50,4 +50,14 @@ describe('ES6 Recap Home Work', () => {
         cart.add(Bar, 22);
         expect(cart.toString()).toBe('In your cart 32 items');
     });
+    test('We can clear our cart', () => {
+        const cart = new ShopCart();
+        const Foo = new Item(1, 'Foo');
+        const Bar = new Item(2, 'Bar');
+        cart.add(Foo, 10);
+        cart.add(Bar, 22);
+        cart.clear();
+        expect(cart.items.length).toBe(0);
+    });
+    
 });
