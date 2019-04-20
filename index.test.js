@@ -22,6 +22,15 @@ describe('ES6 Recap Home Work', () => {
         cart.remove(Foo);
         expect(cart.items.length).toBe(1);
     });
+    test('We can clear cart', () => {
+        const cart = new ShopCart();
+        const Foo = new Item(1, 'Foo');
+        const Bar = new Item(2, 'Bar');
+        cart.add(Foo, 3);
+        cart.add(Bar, 2);
+        cart.clear();
+        expect(cart.items.length).toBe(0);
+    });
     test('We can change quantity items in cart', () => {
         const cart = new ShopCart();
         const Foo = new Item(1, 'Foo');
