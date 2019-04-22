@@ -16,15 +16,22 @@ Cart.prototype.remove = function (item) {
     }
 };
 
-Cart.prototype.clear = function () {
-   //if (this.items.length != 0) {
-       this.items.splice(this.items.length);
-    //}
+Cart.prototype.setCount = function (item, count) {
+    const index = this.getItemIndex(item);
+    if (index === null) {
+        this.items.push({
+            item: item,
+            count: count
+        });
+    } else {
+        this.items[index] = {
+            item: item,
+            count:count
+        };
+    }
 };
 
-Cart.prototype.setCount = function () {
-    return null;
-};
+
 
 
 
