@@ -16,6 +16,16 @@ Cart.prototype.remove = function (item) {
     }
 };
 
+Cart.prototype.clear = function () {
+   //if (this.items.length != 0) {
+       this.items.splice(this.items.length);
+    //}
+};
+
+Cart.prototype.setCount = function () {
+    return null;
+};
+
 
 
 module.exports = ShopCart;
