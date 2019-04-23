@@ -7,20 +7,20 @@ ShopCart.prototype = new Cart;
 
 // ...your code there
 
+// remove item
+
 Cart.prototype.remove = function (item) {
     const index = this.getItemIndex(item);
     this.items.splice(index,1);
 }
 
+// clear cart
+
 Cart.prototype.clear = function () {
-    
-    delete this.items;
-    
-    //let len = this.items.length;
-    //for (let i = 0; i<len; i++) {
-      //  delete this.items[i];
-    //}
+    delete this.items;    
 }
+
+// setCount
 
 Cart.prototype.setCount = function (item, count) {
     const index = this.getItemIndex(item);
@@ -30,6 +30,8 @@ Cart.prototype.setCount = function (item, count) {
         this.items[index].count = count;
     }
 }
+
+// convert to string
 
 Cart.prototype.toString = function () {
     let sum = 0;
