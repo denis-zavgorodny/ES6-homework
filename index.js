@@ -36,9 +36,9 @@ Cart.prototype.setCount = function (item, count) {
 Cart.prototype.toString = function () {
     let sum = 0;
     for (let i=0; i<this.items.length; i++) {
-        sum = sum + this.items[i].count;
+        sum += this.items[i].count;
         };
-    return 'In your cart ' + sum + ' items';
+    return `In your cart ${sum} items`;
 }
 
     module.exports = ShopCart;
