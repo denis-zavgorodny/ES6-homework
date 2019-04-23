@@ -22,21 +22,14 @@ Cart.prototype.clear = function () {
     //}
 }
 
-Cart.prototype.setCount = function (item, count) {
-    const index = this.getItemIndex(item);
-    if ((count) <= 0) {
-        throw 'Count should be greater than zero';
+Cart.prototype.setCount = function (_item, _count) {
+    if (this._count <= 0) {
+        return 'Count should be greater than zero';
     } else {
-        this.items[index].count = count;
+        return this.item;
     }
+
+
 }
 
-Cart.prototype.toString = function () {
-    let sum = 0;
-    for (let i=0; i<this.items.length; i++) {
-        sum = sum + this.items[i].count;
-        };
-    return 'In your cart ' + sum + ' items';
-}
-
-    module.exports = ShopCart;
+module.exports = ShopCart;
