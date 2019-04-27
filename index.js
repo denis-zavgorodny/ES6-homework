@@ -26,8 +26,7 @@ ShopCart.prototype.setCount = function (item, count) {
 };
 
 ShopCart.prototype.toString = function () {
-    let totalCount = this.items.map(item => item.count);
-    let result = totalCount.reduce((accum, currVal) => accum + currVal);
+    let result = this.items.map(item => item.count).reduce((accum, currVal) => accum + currVal);
     return `In your cart ${result} items`
 };
 
